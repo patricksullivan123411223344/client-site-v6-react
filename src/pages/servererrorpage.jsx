@@ -4,7 +4,7 @@ Date: 4/19/2026
 File: ServerErrorPage.jsx
 Description: 500 page route component.
 */
-import ErrorPage from "../components/ErrorPage";
+import ErrorPage from "../components/errorpage";
 
 export default function ServerErrorPage() {
   return (
