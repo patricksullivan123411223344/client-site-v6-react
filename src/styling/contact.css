@@ -1,0 +1,271 @@
+/*
+Name: Patrick Sullivan
+Date: 4/19/2026
+File name: contact.css
+Description: Styling for the React Contact page components.
+*/
+
+/* Contact page variables */
+:root {
+  --contact-text-primary: #2f3a33;
+  --contact-accent: #8fae9d;
+  --contact-accent-hover: #7c9b8b;
+  --contact-page-max: 1100px;
+  --contact-content-max: 760px;
+  --contact-pad-x: 1.5rem;
+  --contact-pad-y: 4rem;
+  --contact-line: #bfc7c1;
+  --contact-shadow: 0 12px 30px rgba(31, 44, 35, 0.08);
+  --contact-panel: rgba(255, 255, 255, 0.78);
+}
+
+/* Contact CTA section */
+.contactBox {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  max-width: var(--contact-page-max);
+  margin: 0 auto;
+  padding: calc(var(--contact-pad-y) + 90px) var(--contact-pad-x) var(--contact-pad-y);
+}
+
+.contactText {
+  margin: 0;
+  padding-top: 20px;
+  max-width: var(--contact-content-max);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--contact-text-primary);
+  font-weight: 650;
+}
+
+.contactButtonWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contactButtons,
+.contactForm .buttonPrimary {
+  appearance: none;
+  border: 1px solid rgba(121, 146, 131, 0.18);
+  border-radius: 999px;
+  font-weight: 650;
+  cursor: pointer;
+  color: var(--contact-text-primary);
+  transition:
+    transform 120ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease,
+    opacity 160ms ease;
+}
+
+.contactButtons {
+  padding: 0.95rem 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f7f3 100%);
+  box-shadow: var(--contact-shadow);
+}
+
+.contactButtons:hover,
+.contactForm .buttonPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(31, 44, 35, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #eef4ef 100%);
+}
+
+.contactButtons:active,
+.contactForm .buttonPrimary:active {
+  transform: translateY(0);
+}
+
+/* Divider spacing */
+hr {
+  width: min(100%, var(--contact-page-max));
+  margin: 0 auto 2rem auto;
+  border: none;
+  border-top: 1px solid rgba(191, 199, 193, 0.8);
+}
+
+/* Weather bar */
+.fullWidthBar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--contact-text-primary);
+  padding: 12px 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(221, 229, 223, 0.9);
+}
+
+/* Booking section */
+#bookingSection {
+  width: min(100%, var(--contact-page-max));
+  margin: 0 auto;
+  padding: 0 var(--contact-pad-x) 2rem;
+}
+
+.bookSessionWrapper {
+  display: grid;
+  place-items: center;
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.bookSessionHeader {
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 5px;
+  font-size: clamp(1.65rem, 2.2vw, 2.15rem);
+  letter-spacing: -0.02em;
+  color: var(--contact-text-primary);
+}
+
+.calendly-inline-widget {
+  width: min(900px, 100%);
+  height: 820px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--contact-line);
+  border-radius: 24px;
+  box-shadow: var(--contact-shadow);
+  overflow: hidden;
+}
+
+.calendly-inline-widget iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+/* Form section */
+.contact {
+  display: grid;
+  justify-content: center;
+  width: min(100%, var(--contact-page-max));
+  margin: 0 auto;
+  padding: 0 var(--contact-pad-x) 4rem;
+}
+
+.emailFormHeader {
+  margin: 0 0 1.25rem 0;
+  font-size: clamp(1.65rem, 2.2vw, 2.15rem);
+  letter-spacing: -0.02em;
+  color: var(--contact-text-primary);
+  text-align: center;
+}
+
+.contactForm {
+  width: min(100%, 760px);
+  background: var(--contact-panel);
+  border: 1px solid var(--contact-line);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--contact-shadow);
+  text-align: left;
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field span {
+  padding-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--contact-text-primary);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--contact-line);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--contact-text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--contact-accent);
+  box-shadow: 0 0 0 4px rgba(143, 174, 157, 0.16);
+  background: #ffffff;
+}
+
+.field textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contactForm .buttonPrimary {
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  justify-self: start;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f6f2 100%);
+  box-shadow: var(--contact-shadow);
+}
+
+/* Validation errors */
+.formError {
+  color: #a94442;
+  font-size: 0.9rem;
+  margin-top: -0.1rem;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .contactBox {
+    padding: calc(var(--contact-pad-y) + 70px) 1rem 3rem;
+  }
+
+  #bookingSection,
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactText {
+    font-size: clamp(1.85rem, 9vw, 2.8rem);
+    line-height: 1.12;
+  }
+
+  .contactButtonWrap {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .contactButtons {
+    width: 100%;
+  }
+
+  .contactForm {
+    padding: 1.1rem;
+    border-radius: 18px;
+  }
+
+  .calendly-inline-widget {
+    border-radius: 18px;
+    height: 760px;
+  }
+}
