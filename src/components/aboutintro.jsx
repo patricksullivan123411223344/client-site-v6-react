@@ -11,7 +11,7 @@ export default function AboutIntro() {
     <section className="meetKatherine">
       <div className="katherineInfoSection">
         <img
-          src="/public/hero_image.png"
+          src="/hero_image.png"
           alt="Meet Katherine Sullivan Image"
           className="kcAboutImage"
         />

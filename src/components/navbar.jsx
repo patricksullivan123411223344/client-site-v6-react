@@ -12,7 +12,7 @@ export default function NavBar() {
         <nav className="navBar" id="navLogic">
             <div className="innerNav">
             <img
-                src="/public/KC_Logo.png"
+                src="/KC_Logo.png"
                 alt="Katherine Sullivan LCSW logo"
                 className="navLogo"
             />

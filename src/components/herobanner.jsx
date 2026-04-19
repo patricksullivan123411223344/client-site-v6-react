@@ -11,7 +11,7 @@ export default function HeroBanner() {
         <section className="heroBanner">
         <img
             className="heroBanner_img"
-            src="/public/hero_image.png"
+            src="/hero_image.png"
             alt="Katherine Sullivan LCSW Hero Image"
         />
 
