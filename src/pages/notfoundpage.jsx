@@ -5,7 +5,7 @@ File: NotFoundPage.jsx
 Description: 404 page for unknown routes.
 */
 import { useLocation } from "react-router-dom";
-import ErrorPage from "../components/ErrorPage";
+import ErrorPage from "../components/errorpage";
 
 export default function NotFoundPage() {
   const location = useLocation();
