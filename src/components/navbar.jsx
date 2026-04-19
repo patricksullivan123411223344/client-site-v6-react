@@ -6,30 +6,30 @@ Description: Shared navigation bar used across site pages.
 */
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
-    return (
-        <header>
-        <nav className="navBar" id="navLogic">
-            <div className="innerNav">
-            <img
-                src="/KC_Logo.png"
-                alt="Katherine Sullivan LCSW logo"
-                className="navLogo"
-            />
+export default function Navbar() {
+  return (
+    <header>
+      <nav className="navBar" id="navLogic">
+        <div className="innerNav">
+          <img
+            src="/KC_Logo.png"
+            alt="Katherine Sullivan LCSW logo"
+            className="navLogo"
+          />
 
-            <ul className="navList">
-             <li className="navbar_home">
+          <ul className="navList">
+            <li className="navbar_home">
               <Link to="/">Home</Link>
-               </li>
-                <li className="navbar_about">
-                  <Link to="/about">About</Link>
-                </li>
-               <li className="navbar_contact_CTA">
+            </li>
+            <li className="navbar_about">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="navbar_contact_CTA">
               <Link to="/contact">Contact</Link>
-             </li>
-            </ul>
-            </div>
-        </nav>
-        </header>
-    );
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  );
 }

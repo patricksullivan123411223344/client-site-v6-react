@@ -55,7 +55,7 @@ export default function OfficeMapSection() {
     };
 
     mapEl.center = position;
-    mapEl.zoom = 15;
+    mapEl.zoom = 10;
 
     if (markerEl) {
       markerEl.position = position;
@@ -146,31 +146,30 @@ export default function OfficeMapSection() {
 
   return (
     <section className="mapLocationSection">
-      <h2 className="mapTitle">Tap for Directions to Office:</h2>
+    <h2 className="mapTitle">Tap for Directions to Office:</h2>
 
-      <div className="googleMapWrapper">
+    <div className="googleMapWrapper">
         <gmp-map
-          ref={mapRef}
-          id="officeMap"
-          className="googleMapRender"
-          zoom="10"
-          style={{ height: "500px" }}
+        ref={mapRef}
+        id="officeMap"
+        className="googleMapRender"
+        style={{ height: "500px" }}
         >
-          <gmp-marker
+        <gmp-marker
             ref={markerRef}
             id="officeMarker"
             title="Katherine's Office"
-          ></gmp-marker>
+        ></gmp-marker>
         </gmp-map>
-      </div>
+    </div>
 
-      <div className="mapStatus">
+    <div className="mapStatus">
         <p id="geoStatus">{geoStatus}</p>
         <p id="geoResult">{geoResult}</p>
         <button id="recenterBtn" type="button" onClick={handleRecenter}>
-          Recenter to Office
+        Recenter to Office
         </button>
-      </div>
+    </div>
     </section>
   );
 }
